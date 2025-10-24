@@ -1,10 +1,8 @@
 #include "main.h"
 /**
- * main - Entry point
- * Return: Always 0 (Success)
- */
-
-void print_alphabet(void) /*Alphabet lowercase function*/
+* print_alphabet - Prints the lowercase alphabet followed by a new line
+*/
+void print_alphabet(void)
 {
 	char c;
 
@@ -13,5 +11,4 @@ void print_alphabet(void) /*Alphabet lowercase function*/
 		_putchar(c);
 		}
 		_putchar('\n');
-
 }
