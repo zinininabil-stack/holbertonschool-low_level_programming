@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - Prints the last digit of a number.
- * The number whose last digit will be printed.
+ * @n: The number whose last digit will be printed.
  *
  * Description: This function computes the last digit of the integer n,
  *              prints it to stdout using _putchar, and returns its value.
