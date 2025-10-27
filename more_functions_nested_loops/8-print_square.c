@@ -13,10 +13,10 @@
  */
 void print_square(int size)
 {
-int x = 0;	  /** Rows */
+int x = 0; /** Rows */
 int y = 0; /** Columns */
 
-		if (size <= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
@@ -24,11 +24,11 @@ int y = 0; /** Columns */
 	{
 		for (x = 0; x < size; x++)
 		{
-				for (y = 0; y < size; y++)
-				{
-					_putchar('#');
-				}
-				_putchar('\n');
+			for (y = 0; y < size; y++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
 	}
 }
