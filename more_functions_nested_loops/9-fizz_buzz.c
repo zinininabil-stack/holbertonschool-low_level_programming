@@ -20,10 +20,10 @@ for (n = 1; n <= 100; n++)
 	printf("Fizz");
 
 	else
-		printf("%d" , n);
+	printf("%d", n);
 
 	if (n < 100)
-			printf(" ");
+	printf(" ");
 }
 	printf("\n");
 
