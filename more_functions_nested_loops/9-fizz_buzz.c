@@ -21,6 +21,9 @@ for (n = 1; n <= 100; n++)
 
 	else
 		printf("%d" , n);
+
+	if (n < 100)
+			printf(" ");
 }
 	printf("\n");
 
