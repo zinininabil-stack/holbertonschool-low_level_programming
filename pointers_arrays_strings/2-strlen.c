@@ -10,12 +10,12 @@
 *
 * Return: The length of the string.
 */
-int _strlen(char *salutcopain)
+int _strlen(char *s)
 
 {
 	int i = 0;
 
-	while (salutcopain[i] != '\0')
+	while (s[i] != '\0')
 
 	{
 		i++;
