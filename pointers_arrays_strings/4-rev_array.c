@@ -1,40 +1,28 @@
-
 #include "main.h"
 
-
-
-
-
 /**
- * print_rev - Prints a string in reverse, followed by a new line.
- * @s: Pointer to the string to be reversed and printed.
+ * reverse_array - Reverses the elements of an integer array in place
+ * @a: Pointer to the first element of the array
+ * @n: Number of elements in the array
  *
- * Description: This function prints the characters of a string
- *              in reverse order using the _putchar function.
- *              It first iterates through the string to find its end,
- *              then prints each character backward until the start
- *              of the string is reached. Finally, it prints a new line.
+ * Description: This function reverses the order of elements in the
+ *              integer array pointed to by @a. It swaps the first
+ *              element with the last, the second with the second-to-last,
+ *              and so on, until the entire array is reversed.
  *
- * Return: Nothing (void).
+ * Return: Nothing (void)
  */
 
-void print_rev(char *s)
+void reverse_array(int *a, int n)
 
 {
-	int t = 0;
+	int i, j = 0;
+	int t;
 
-	while (*s != '\0')
+	for (i = n - 1; i > (n / 2); i--, j++)
 	{
-		s++;
-		t++;
+	t = a[i];
+	a[i] = a[j];
+	a[j] = t;
 	}
-	s--;
-	t--;
-	while (t >= 0)
-	{
-		_putchar(*s);
-		t--;
-		s--;
-	}
-_putchar('\n');
 }
