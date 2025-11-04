@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _memcpy - copies memory area
  * @dest: destination memory area
@@ -9,7 +8,7 @@
  * Return: pointer to dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
-unsigned int i;
+unsigned int i = 0
 {	
 for (i = 0; i < n; i++)
 	{
