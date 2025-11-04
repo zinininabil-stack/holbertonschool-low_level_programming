@@ -1,0 +1,20 @@
+#include "main.h"
+#include <stdio.h>
+/**
+
+
+*/
+char *_memset(char *s, char b, unsigned int n)
+
+{
+	
+	unsigned int n = 0
+	{
+		while (i < n)
+		s[i] = b
+		i++;
+	}
+
+	return (s);
+
+}
