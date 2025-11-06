@@ -1,36 +1,32 @@
 #include "main.h"
 
 /**
- * is_prime_number - Checks if a number is a prime number
+ * is_prime_number - returns 1 if a number is prime, 0 otherwise
+ * root_is_prime_number - prime number function
  * @n: number to check
+ *
  * Return: 1 if n is prime, 0 otherwise
  */
-
 int is_prime_number(int n)
 {
-	return (prime_check(n, 2));
+n = root_is_prime_number(1, n);
+	return (n);
 }
 
-/**
- * prime_check - Checks if a number is prime recursively
- * @t: number to check for primality
- * @s: current divisor
- * Return: 1 if prime, 0 otherwise
- */
-
-int prime_check(int t, int s)
+int root_is_prime_number(int n, int x)
 {
-	if (t < 2)
-	{
-		return (0);
-	}
-	if (t % s == 0 && s != t)
-	{
-		return (0);
-	}
-	if (s > t - 1)
-	{
-		return (1);
-	}
-	return (prime_check(t, s + 1));
+
+
+if (n % x == 0)
+return (0);
+
+if (n % x != 0)
+return (1);
+
+if (n < 2)
+return (0);
+
+else
+return (root_is_prime_number(n, x - 5));
+
 }
