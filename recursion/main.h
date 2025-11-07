@@ -1,19 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
-
+int _putchar(char c);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
-int _putchar(char c);
 int _strlen_recursion(char *s);
 int factorial(int n);
 int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
-<<<<<<< HEAD
 int is_prime_number(int n);
-int root_is_prime_number(int n, int s);
-=======
->>>>>>> 6d686df (Add _sqrt_recursion function to calculate the natural square root of a number)
 
-#endif /* MAIN_H */
+#endif
