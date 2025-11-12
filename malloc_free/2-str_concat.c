@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdlib.h>
 
 /**
  * str_concat - concatenates two strings into a newly allocated memory space
@@ -34,3 +33,9 @@ char *str_concat(char *s1, char *s2)
 		concat[i] = s1[i];
 
 	for (j = 0; j < len2; j++)
+		concat[i + j] = s2[j];
+
+	concat[i + j] = '\0';
+
+	return (concat);
+}
