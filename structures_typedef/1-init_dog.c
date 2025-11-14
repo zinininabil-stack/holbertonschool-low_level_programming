@@ -1,25 +1,24 @@
 #include "dog.h"
 #include <stddef.h>
-#include <stdio.h>
 
 /**
- * init_dog - initialize a struct dog
+ * init_dog - Initializes a struct dog with the provided values
  * @d: pointer to struct dog to initialize
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
+ * @name: name to set in the struct
+ * @age: age to set in the struct
+ * @owner: owner to set in the struct
  *
- * Description: Initializes the members of a struct dog with provided values.
+ * Description: This function initializes a struct dog with the
+ * provided name, age, and owner. It does not return a value.
  */
+
 void init_dog(struct dog *d, char *name, float age, char *owner)
+
 {
-	if (d == NULL)
-	{
-		return;
-	}
+if (d == NULL)
+	return;
 
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
+d->name = name;
+d->age = age;
+d->owner = owner;
 }
-
