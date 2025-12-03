@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint - Adds a new node at the end of a dlistint_t list
+ * add_dnodeint_end - Adds a new node at the end of a dlistint_t list
  * @head: Pointer to the head pointer of the list
  * @n: Integer to store in the new node
  *
@@ -10,7 +10,7 @@
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-dlistint_t *new_node;
+	dlistint_t *new_node, *temp;
 
 	if (!head)
 		return (NULL);
@@ -20,18 +20,26 @@ dlistint_t *new_node;
 	if (!new_node)
 		return (NULL);
 
-	/* Set the node data */
+	/* Initialize the new node */
 	new_node->n = n;
-	new_node->next = NULL;        /* New node will be the last node */
+	new_node->next = NULL;
 
+	/* If list is empty, new node becomes the head */
+	if (*head == NULL)
+	{
+		new_node->prev = NULL;
+		*head = new_node;
+		return (new_node);
+	}
 
-	/* If list is not empty, set previous head's prev to new node */
-	if (*head)
-		(*head)->next = new_node;
+	/* Traverse to the last node */
+	temp = *head;
+	while (temp->next)
+		temp = temp->next;
 
-	/* Update head pointer */
-	*head = new_node;
+	/* Append the new node at the end */
+	temp->next = new_node;
+	new_node->prev = temp;
 
 	return (new_node);
 }
-
