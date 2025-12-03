@@ -17,34 +17,28 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!head || !str)
 		return (NULL);
 
-	/* allocate new node */
 	new_node = malloc(sizeof(list_t));
 	if (!new_node)
 		return (NULL);
 
-	/* duplicate string (allowed) */
 	new_node->str = strdup(str);
 	if (!new_node->str)
 	{
 		free(new_node);
 		return (NULL);
 	}
-
-	/* manually compute length (no strlen allowed) */
 	while (str[len])
 		len++;
 
 	new_node->len = len;
 	new_node->next = NULL;
 
-	/* if list is empty */
 	if (*head == NULL)
 	{
 		*head = new_node;
 		return (new_node);
 	}
 
-	/* otherwise go to the end */
 	temp = *head;
 	while (temp->next)
 		temp = temp->next;
